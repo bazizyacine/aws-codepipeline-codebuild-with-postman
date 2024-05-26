@@ -163,7 +163,7 @@ Resources:
           Value:
             Fn::Sub: ${AWS::StackName}-codepipeline-artifact-bucket
 
-  #code build - api deployment using SAM (see buildspec.yml)
+  # code build - api deployment using SAM (see buildspec.yml)
   PetStoreAPISAMCodeBuildProject:
     Type: AWS::CodeBuild::Project
     Properties:
