@@ -10,6 +10,7 @@ phases:
       nodejs: 10
     commands: #https://learning.getpostman.com/docs/postman/collection-runs/command-line-integration-with-newman/
       - npm install -g newman
+      - newman -v
       - yum install -y jq
 
   pre_build:
@@ -22,8 +23,6 @@ phases:
   build:
     commands:
       - echo Build started on `date` from dir `pwd`
-      - newman -v
-      - ls
       - newman run PetStoreAPI.postman_collection.json --environment PetStoreAPIEnvironment.postman_environment.json -r junit
 
 reports:
