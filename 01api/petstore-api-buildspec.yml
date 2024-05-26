@@ -7,6 +7,7 @@ phases:
         --s3-bucket aws-codepipeline-codebuild-with-postman
         --s3-prefix api-code
         --output-template-file petstore-api-output.yaml
+        
 artifacts:
   type: zip
   files:
